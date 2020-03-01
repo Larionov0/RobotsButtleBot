@@ -2,8 +2,6 @@ from json import dumps
 from bot import Bot
 from misc import token
 
-url = 'https://api.telegram.org'
-
 
 def print_structure(struct):
     print(dumps(struct, indent=4))
@@ -12,9 +10,7 @@ def print_structure(struct):
 def main():
     bot = Bot(token)
 
-    update = bot.get_updates()[-1]
-    chat_id = bot.get_chat_id_from_update(update)
-    bot.send_message(chat_id, "I am too")
+    bot.run()
 
 
 if __name__ == "__main__":
