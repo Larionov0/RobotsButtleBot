@@ -2,6 +2,7 @@ import requests
 from time import sleep
 from random import choice
 from tools import *
+from users import *
 
 
 class Bot:
@@ -11,6 +12,7 @@ class Bot:
     def __init__(self, token):
         self.token = token
         self.set_last_update_id_from_file()
+        self.users = Users()
 
     def run(self):
         while True:
@@ -27,15 +29,20 @@ class Bot:
         text = self.get_message_text_from_update(update)
 
         if text == "/start":
-            b1 = Button('играть', callback_data='game')
-            b2 = Button('магазин', callback_data='store')
-            b3 = Button('Ознакомиться с правилами', callback_data="rules")
-            r1 = Row([b1])
-            r2 = Row([b2])
-            r3 = Row([b3])
-            k = Keyboard([r1, r2, r3])
+            if self.users.find_user_by_chat_id(chat_id):
+                pass
+            else:
+                b1 = Button('играть', callback_data='game')
+                b2 = Button('магазин', callback_data='store')
+                b3 = Button('Ознакомиться с правилами', callback_data="rules")
+                r1 = Row([b1])
+                r2 = Row([b2])
+                r3 = Row([b3])
+                k = Keyboard([r1, r2, r3])
 
-            self.send_message(chat_id, "Выберите пункт:", keyboard=k)
+                message = self.send_message(chat_id, "Выберите пункт:", keyboard=k)
+                user = User(chat_id, message["result"]["message_id"])
+                self.users.append(user)
 
         else:
             if any([word in text.lower() for word in ["привет", "привки", "хай", "hi", "hello", "what`s up"]]):
@@ -43,24 +50,26 @@ class Bot:
             else:
                 answer_text = "Пока не умею отвечать на это предложение!"
 
-            self.send_message(chat_id, answer_text)
+            user = self.users.find_user_by_chat_id(chat_id)
+            self.edit_message(chat_id, user.message_id, answer_text)
 
     def give_answer_to_button_pressing(self, update):
         callback_query_id = update["callback_query"]["id"]
         chat_id = update['callback_query']['message']['chat']['id']
         callback_data = update['callback_query']['data']
 
+        user = self.users.find_user_by_chat_id(chat_id)
         if callback_data == "rules":
-            self.send_message(chat_id, "Правила таковы: ты ры пы ры тра ли ва ли🤩")
+            self.edit_message(chat_id, user.message_id, "Правила таковы: ты ры пы ры тра ли ва ли🤩")
         elif callback_data == "store":
             b1 = Button('пупсень', "Pupsen")
             b2 = Button('вупсень', "Vupsen")
             r1 = Row([b1])
             r2 = Row([b2])
             k = Keyboard([r1, r2])
-            self.send_message(chat_id, "Магазин: ", keyboard=k)
+            self.edit_message(chat_id, user.message_id, "Магазин: ", keyboard=k)
         elif callback_data == "Pupsen":
-            self.send_message(chat_id, "Пупсень пока недоступен!")
+            self.edit_message(chat_id, user.message_id, "Пупсень пока недоступен!")
 
         self.answer_callback_query(callback_query_id)
 
@@ -82,9 +91,17 @@ class Bot:
 
     def send_message(self, chat_id, text, keyboard=None):
         if keyboard:
-            requests.get(f"{self.url}/bot{self.token}/sendMessage?chat_id={chat_id}&text={text}&reply_markup=" + '{"inline_keyboard": ' + keyboard.to_json() + '}')
+            message = requests.get(f"{self.url}/bot{self.token}/sendMessage?chat_id={chat_id}&text={text}&reply_markup=" + '{"inline_keyboard": ' + keyboard.to_json() + '}').json()
         else:
-            requests.get(f"{self.url}/bot{self.token}/sendMessage?chat_id={chat_id}&text={text}")
+            message = requests.get(f"{self.url}/bot{self.token}/sendMessage?chat_id={chat_id}&text={text}").json()
+        return message
+
+    def edit_message(self, chat_id, message_id, text, keyboard=None):
+        if keyboard:
+            requests.get(f"{self.url}/bot{self.token}/editMessageText?chat_id={chat_id}&message_id={message_id}&text={text}&reply_markup=" + '{"inline_keyboard": ' + keyboard.to_json() + '}')
+        else:
+            requests.get(f"{self.url}/bot{self.token}/editMessageText?chat_id={chat_id}&message_id={message_id}&text={text}")
+
 
     def get_new_updates(self):
         updates = self.get_updates()
