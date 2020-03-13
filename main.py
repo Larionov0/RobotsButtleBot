@@ -1,5 +1,4 @@
-from json import dumps
-from bot import Bot
+from bot import Bot, dumps
 from misc import token
 
 
