@@ -19,7 +19,7 @@ class Bot:
             new_updates = self.get_new_updates()
             for update in new_updates:
                 self.give_answer(update)
-            sleep(2)
+            sleep(0.5)
 
     def answer_callback_query(self, callback_query_id):
         requests.get(f"{self.url}/bot{self.token}/answerCallbackQuery?callback_query_id={callback_query_id}")
