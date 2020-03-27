@@ -2,7 +2,7 @@ import requests
 from time import sleep
 from random import choice
 from tools import *
-from users import *
+from Users import *
 
 
 class Bot:
@@ -32,6 +32,17 @@ class Bot:
             if self.users.find_user_by_chat_id(chat_id):
                 pass
             else:
+                b1 = Button('Пупсень', callback_data='Pupsen')
+                b2 = Button('Вупсень', callback_data='Vupsen')
+                r = Row([b1])
+                r2 = Row([b2])
+
+                k = Keyboard([r, r2])
+                message = self.send_message(chat_id, "Выберите пункт:", keyboard=k)
+                user = User(chat_id, message["result"]["message_id"])
+                self.users.append(user)
+
+                """
                 b1 = Button('играть', callback_data='game')
                 b2 = Button('магазин', callback_data='store')
                 b3 = Button('Ознакомиться с правилами', callback_data="rules")
@@ -43,6 +54,7 @@ class Bot:
                 message = self.send_message(chat_id, "Выберите пункт:", keyboard=k)
                 user = User(chat_id, message["result"]["message_id"])
                 self.users.append(user)
+                """
 
         else:
             if any([word in text.lower() for word in ["привет", "привки", "хай", "hi", "hello", "what`s up"]]):

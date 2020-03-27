@@ -1,7 +1,27 @@
+from GameObjects import *
+
+
+class State:
+    type: str
+    all_types = ['прохлаждается', 'в бою']
+
+    def __init__(self, type_):
+        self.type = type_
+
+
 class User:
+    chat_id: int
+    state: State
+    hero: Hero
+
+    players = []
+
     def __init__(self, chat_id, message_id):
         self.chat_id = chat_id
         self.message_id = message_id
+        self.state = State('прохлаждается')
+        self.hero = None
+        self.players.append(self)
 
 
 class Users:
@@ -19,4 +39,3 @@ class Users:
             if user.chat_id == chat_id:
                 return user
         return False
-
