@@ -1,0 +1,137 @@
+[
+    {
+        "name": "Pupsen",
+        "hp": 1,
+        "energy": 1,
+        "energy_recovery": 1,
+        "hp_recovery": 1,
+        "satiety": 1,
+        "skills": [
+            {
+                "type": "skill",
+                "name": "Polzti",
+                "energy": 3,
+                "chastota": 2,
+                "positive": [
+                    {
+                        "type": "Heal",
+                        "hp": 2
+                    },
+                    {
+                        "type": "AttackBuff",
+                        "value": 1
+                    }
+                ],
+                "negative": [],
+                "needs": []
+            },
+            {
+                "type": "skill",
+                "name": "Trolit",
+                "energy": 1,
+                "chastota": 1,
+                "positive": [
+                    {
+                        "type": "Heal",
+                        "hp": 1
+                    }
+                ],
+                "negative": [],
+                "needs": [
+                    {
+                        "type": "on_enemy",
+                        "states": [
+                            "СѓРЅРёР¶РµРЅ",
+                            "РїРѕРґР°РІР»РµРЅ"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Vupsen",
+        "hp": 2,
+        "energy": 2,
+        "energy_recovery": 2,
+        "hp_recovery": 2,
+        "satiety": 2,
+        "skills": [
+            {
+                "type": "skill",
+                "name": "Otdihat",
+                "energy": 4,
+                "chastota": 1,
+                "positive": [
+                    {
+                        "type": "Heal",
+                        "hp": 3
+                    }
+                ],
+                "negative": [],
+                "needs": []
+            }
+        ]
+    },
+    {
+        "name": "Luntik",
+        "hp": 1,
+        "energy": 1,
+        "energy_recovery": 1,
+        "hp_recovery": 1,
+        "satiety": 1,
+        "skills": [
+            {
+                "class": "skill",
+                "name": "Веселье",
+                "energy": 1,
+                "chastota": 1,
+                "positive": [
+                    {
+                        "class": "Heal",
+                        "hp": 2
+                    }
+                ],
+                "negative": [
+                    {
+                        "class": "StateSetter",
+                        "value": {
+                            "class": "state",
+                            "name": "смеется"
+                        }
+                    }
+                ],
+                "needs": []
+            }
+        ],
+        "class": "Hero"
+    },
+    {
+        "name": "test",
+        "hp": 1,
+        "energy": 1,
+        "energy_recovery": 1,
+        "hp_recovery": 1,
+        "satiety": 1,
+        "skills": [
+            {
+                "class": "skill",
+                "name": "lol",
+                "energy": 1,
+                "chastota": 1,
+                "positive": [],
+                "negative": [],
+                "needs": [
+                    {
+                        "class": "Need",
+                        "type": "state_on_self",
+                        "states": [
+                            "присел"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "class": "Hero"
+    }
+]

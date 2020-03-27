@@ -4,26 +4,20 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>696</x>
+      <x>486</x>
       <y>180</y>
       <w>210</w>
       <h>96</h>
     </coordinates>
     <panel_attributes>HeroPrototype
 --
-+ name: str
-+ hp: int
-+ energy: int
-+ energy_recovey: int
-+ satiety: int
-+ hp_recovery: int
-+ skills: list[Skill]</panel_attributes>
+satiety</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>576</x>
+      <x>366</x>
       <y>528</y>
       <w>210</w>
       <h>120</h>
@@ -37,7 +31,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>306</x>
+      <x>96</x>
       <y>192</y>
       <w>120</w>
       <h>102</h>
@@ -74,7 +68,7 @@ dop: "2 * attack"
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>336</x>
+      <x>126</x>
       <y>348</y>
       <w>60</w>
       <h>30</h>
@@ -85,7 +79,7 @@ dop: "2 * attack"
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>270</x>
+      <x>60</x>
       <y>414</y>
       <w>60</w>
       <h>42</h>
@@ -98,7 +92,7 @@ dop: "2 * attack"
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>396</x>
+      <x>186</x>
       <y>414</y>
       <w>60</w>
       <h>42</h>
@@ -110,7 +104,7 @@ dop: "2 * attack"
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>210</x>
+      <x>0</x>
       <y>480</y>
       <w>60</w>
       <h>18</h>
@@ -121,7 +115,7 @@ dop: "2 * attack"
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>270</x>
+      <x>60</x>
       <y>504</y>
       <w>60</w>
       <h>18</h>
@@ -132,7 +126,7 @@ dop: "2 * attack"
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>228</x>
+      <x>18</x>
       <y>540</y>
       <w>60</w>
       <h>18</h>
@@ -143,7 +137,7 @@ dop: "2 * attack"
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>270</x>
+      <x>60</x>
       <y>564</y>
       <w>60</w>
       <h>18</h>
@@ -154,7 +148,7 @@ dop: "2 * attack"
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>312</x>
+      <x>102</x>
       <y>540</y>
       <w>60</w>
       <h>18</h>
@@ -165,7 +159,7 @@ dop: "2 * attack"
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>252</x>
+      <x>42</x>
       <y>516</y>
       <w>54</w>
       <h>36</h>
@@ -176,7 +170,7 @@ dop: "2 * attack"
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>294</x>
+      <x>84</x>
       <y>516</y>
       <w>18</w>
       <h>60</h>
@@ -187,7 +181,7 @@ dop: "2 * attack"
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>306</x>
+      <x>96</x>
       <y>516</y>
       <w>36</w>
       <h>36</h>
@@ -198,7 +192,7 @@ dop: "2 * attack"
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>294</x>
+      <x>84</x>
       <y>450</y>
       <w>18</w>
       <h>66</h>
@@ -209,7 +203,7 @@ dop: "2 * attack"
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>234</x>
+      <x>24</x>
       <y>450</y>
       <w>60</w>
       <h>42</h>
@@ -220,7 +214,7 @@ dop: "2 * attack"
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>300</x>
+      <x>90</x>
       <y>372</y>
       <w>66</w>
       <h>54</h>
@@ -231,7 +225,7 @@ dop: "2 * attack"
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>372</x>
+      <x>162</x>
       <y>372</y>
       <w>72</w>
       <h>54</h>
@@ -242,7 +236,7 @@ dop: "2 * attack"
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
+      <x>150</x>
       <y>288</y>
       <w>30</w>
       <h>72</h>
@@ -255,7 +249,7 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
+      <x>210</x>
       <y>222</y>
       <w>288</w>
       <h>24</h>
@@ -268,7 +262,7 @@ m2=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>678</x>
+      <x>468</x>
       <y>270</y>
       <w>132</w>
       <h>270</h>
@@ -281,7 +275,7 @@ m2=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
+      <x>210</x>
       <y>276</y>
       <w>210</w>
       <h>264</h>
@@ -294,38 +288,32 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>864</x>
+      <x>678</x>
       <y>300</y>
       <w>210</w>
-      <h>120</h>
+      <h>84</h>
     </coordinates>
     <panel_attributes>Creature
 --
-+ name: str
 + max_hp: int
-+ hp: int
-+ max_energy: int
-+ energy: int
-+ energy_recovey: int
-+ hp_recovery: int
-+ skills: list[Skill]</panel_attributes>
++ max_energy: int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>726</x>
-      <y>384</y>
-      <w>150</w>
-      <h>156</h>
+      <x>516</x>
+      <y>378</y>
+      <w>174</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>230.0;10.0;10.0;240.0</additional_attributes>
+    <additional_attributes>270.0;10.0;10.0;250.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1104</x>
+      <x>894</x>
       <y>546</y>
       <w>210</w>
       <h>120</h>
@@ -338,38 +326,30 @@ m2=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1068</x>
-      <y>390</y>
-      <w>144</w>
-      <h>168</h>
+      <x>882</x>
+      <y>378</y>
+      <w>120</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;220.0;260.0</additional_attributes>
+    <additional_attributes>10.0;10.0;180.0;280.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1122</x>
+      <x>912</x>
       <y>180</y>
       <w>210</w>
       <h>96</h>
     </coordinates>
     <panel_attributes>NPCPrototype
---
-+ name: str
-+ hp: int
-+ energy: int
-+ energy_recovey: int
-+ satiety: int
-+ hp_recovery: int
---
-skills: list[Skill]</panel_attributes>
+--</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1224</x>
+      <x>1014</x>
       <y>270</y>
       <w>30</w>
       <h>288</h>
@@ -382,7 +362,7 @@ m2=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>678</x>
+      <x>468</x>
       <y>822</y>
       <w>210</w>
       <h>120</h>
@@ -396,7 +376,7 @@ hero: Hero</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>708</x>
+      <x>498</x>
       <y>642</y>
       <w>24</w>
       <h>192</h>
@@ -409,7 +389,7 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
+      <x>690</x>
       <y>90</y>
       <w>72</w>
       <h>162</h>
@@ -420,7 +400,7 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1062</x>
+      <x>852</x>
       <y>90</y>
       <w>72</w>
       <h>138</h>
@@ -431,7 +411,7 @@ m2=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>924</x>
+      <x>714</x>
       <y>0</y>
       <w>210</w>
       <h>96</h>
@@ -442,7 +422,6 @@ m2=1</panel_attributes>
 + hp: int
 + energy: int
 + energy_recovey: int
-+ satiety: int
 + hp_recovery: int
 + skills: list[Skill]</panel_attributes>
     <additional_attributes/>
@@ -450,12 +429,23 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>960</x>
+      <x>780</x>
       <y>90</y>
-      <w>66</w>
+      <w>24</w>
       <h>222</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;350.0;90.0;10.0</additional_attributes>
+    <additional_attributes>20.0;10.0;10.0;350.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>444</x>
+      <y>270</y>
+      <w>108</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;430.0</additional_attributes>
   </element>
 </diagram>
